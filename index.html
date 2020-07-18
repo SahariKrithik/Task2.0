@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>acm task</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+	<script>
+		//console.log(localStorage);
+		function store(){
+			var event = document.getElementById('event').value;
+			var budget = document.getElementById('budget').value;
+			var venue = document.getElementById('venue').value;
+
+			
+
+			window.localStorage.setItem('event', event);
+			window.localStorage.setItem('budget', budget);
+			window.localStorage.setItem('venue', venue);
+
+			//console.log(event);
+			//console.log(budget);
+			//console.log(venue);
+			
+		}
+	</script>
+</head>
+<body> 
+	<center><font face="poppins" color="black" size="10">ACM EVENT MANAGMENT</font></center>
+	<marquee><font face="poppins" color="green">Fill in the form to store the event details</font> </marquee>
+</br>
+</br>
+	<div class="container">
+  <font face="poppins" size="8">Enter the details below!</font>
+  <form class="form-horizontal" action="list.html">
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Event Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="event" placeholder="Enter event name" name="event">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Event budget:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="budget" placeholder="Enter event budget" name="budget">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Event venue:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="venue" placeholder="Enter event venue" name="venue">
+      </div>
+    </div>
+    
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="Submit" class="btn btn-success" onclick="store();">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
